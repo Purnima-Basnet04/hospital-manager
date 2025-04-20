@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard - LifeCare Medical Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/clean-dashboard.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-heartbeat"></i>
+        <span>LifeCare</span>
+      </a>
+      
+      <div class="header-actions">
+        <div class="notification-icon">
+          <i class="far fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        
+        <div class="user-menu">
+          <div class="user-avatar">
+            <span>DS</span>
+          </div>
+          <span class="user-name">Dr. Smith</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-menu">
+      <div class="menu-section">
+        <div class="menu-title">Main</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link active">
+              <i class="fas fa-home menu-icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-calendar-alt menu-icon"></i>
+              <span>Appointments</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-user-injured menu-icon"></i>
+              <span>Patients</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-notes-medical menu-icon"></i>
+              <span>Medical Records</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="menu-section">
+        <div class="menu-title">Management</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-pills menu-icon"></i>
+              <span>Prescriptions</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-file-medical-alt menu-icon"></i>
+              <span>Lab Reports</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-clock menu-icon"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="menu-section">
+        <div class="menu-title">Account</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-user-md menu-icon"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-cog menu-icon"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-sign-out-alt menu-icon"></i>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Welcome Section -->
+    <div class="doctor-welcome">
+      <h1 class="welcome-title">Welcome, Dr. Smith!</h1>
+      <p class="welcome-subtitle">Here's your dashboard overview for today</p>
+    </div>
+    
+    <!-- Stats Row -->
+    <div class="stats-row">
+      <div class="stat-card primary">
+        <div class="stat-content">
+          <h3 class="stat-title">Today's Appointments</h3>
+          <p class="stat-value">8</p>
+        </div>
+      </div>
+      
+      <div class="stat-card secondary">
+        <div class="stat-content">
+          <h3 class="stat-title">Total Patients</h3>
+          <p class="stat-value">45</p>
+        </div>
+      </div>
+      
+      <div class="stat-card accent">
+        <div class="stat-content">
+          <h3 class="stat-title">Pending Reports</h3>
+          <p class="stat-value">3</p>
+        </div>
+      </div>
+      
+      <div class="stat-card warning">
+        <div class="stat-content">
+          <h3 class="stat-title">Completed Appointments</h3>
+          <p class="stat-value">120</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <h2 class="section-title">Quick Actions</h2>
+      
+      <div class="action-buttons">
+        <a href="#" class="action-button">
+          <i class="fas fa-calendar-check action-icon"></i>
+          <span class="action-label">View Appointments</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-prescription action-icon"></i>
+          <span class="action-label">Add Prescription</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-file-medical action-icon"></i>
+          <span class="action-label">Add Medical Record</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-clock action-icon"></i>
+          <span class="action-label">Update Schedule</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Today's Appointments -->
+    <div class="appointments-section">
+      <h2 class="section-title">
+        Today's Appointments
+        <a href="#">View All</a>
+      </h2>
+      
+      <div class="appointment-list">
+        <div class="appointment-card upcoming">
+          <div class="appointment-time">
+            <div class="time-display">09:00 AM</div>
+            <div class="date-display">Today</div>
+          </div>
+          
+          <div class="appointment-details">
+            <h3 class="patient-name">John Doe</h3>
+            <p class="appointment-type">General Checkup</p>
+          </div>
+          
+          <div class="appointment-actions">
+            <button class="btn btn-sm btn-primary">Start</button>
+            <button class="btn btn-sm btn-secondary">Reschedule</button>
+          </div>
+        </div>
+        
+        <div class="appointment-card upcoming">
+          <div class="appointment-time">
+            <div class="time-display">10:30 AM</div>
+            <div class="date-display">Today</div>
+          </div>
+          
+          <div class="appointment-details">
+            <h3 class="patient-name">Jane Smith</h3>
+            <p class="appointment-type">Follow-up</p>
+          </div>
+          
+          <div class="appointment-actions">
+            <button class="btn btn-sm btn-primary">Start</button>
+            <button class="btn btn-sm btn-secondary">Reschedule</button>
+          </div>
+        </div>
+        
+        <div class="appointment-card upcoming">
+          <div class="appointment-time">
+            <div class="time-display">01:15 PM</div>
+            <div class="date-display">Today</div>
+          </div>
+          
+          <div class="appointment-details">
+            <h3 class="patient-name">Robert Johnson</h3>
+            <p class="appointment-type">Lab Results Review</p>
+          </div>
+          
+          <div class="appointment-actions">
+            <button class="btn btn-sm btn-primary">Start</button>
+            <button class="btn btn-sm btn-secondary">Reschedule</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Recent Patients -->
+    <div class="patient-list-section">
+      <h2 class="section-title">
+        Recent Patients
+        <a href="#">View All</a>
+      </h2>
+      
+      <div class="patient-search">
+        <input type="text" class="search-input" placeholder="Search patients...">
+      </div>
+      
+      <div class="patient-grid">
+        <div class="patient-card">
+          <div class="patient-avatar">JD</div>
+          <div class="patient-info">
+            <h4>John Doe</h4>
+            <p>Last visit: 2 days ago</p>
+          </div>
+        </div>
+        
+        <div class="patient-card">
+          <div class="patient-avatar">JS</div>
+          <div class="patient-info">
+            <h4>Jane Smith</h4>
+            <p>Last visit: 1 week ago</p>
+          </div>
+        </div>
+        
+        <div class="patient-card">
+          <div class="patient-avatar">RJ</div>
+          <div class="patient-info">
+            <h4>Robert Johnson</h4>
+            <p>Last visit: Today</p>
+          </div>
+        </div>
+        
+        <div class="patient-card">
+          <div class="patient-avatar">MW</div>
+          <div class="patient-info">
+            <h4>Mary Williams</h4>
+            <p>Last visit: 3 days ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Simple toggle for mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add mobile menu toggle functionality if needed
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

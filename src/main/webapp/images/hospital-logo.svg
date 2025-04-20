@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="200" height="200" rx="30" fill="url(#paint0_linear)"/>
+
+  <!-- Hospital Cross Symbol -->
+  <path d="M100 40C87.85 40 78 49.85 78 62V88H52C39.85 88 30 97.85 30 110C30 122.15 39.85 132 52 132H78V158C78 170.15 87.85 180 100 180C112.15 180 122 170.15 122 158V132H148C160.15 132 170 122.15 170 110C170 97.85 160.15 88 148 88H122V62C122 49.85 112.15 40 100 40Z" fill="white"/>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C7BE5"/>
+      <stop offset="1" stop-color="#1A56B0"/>
+    </linearGradient>
+  </defs>
+</svg>

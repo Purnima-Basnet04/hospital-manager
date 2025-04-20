@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test About Page</title>
+    <link rel="stylesheet" href="styles/about-us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- History Timeline Section -->
+        <section class="history-section">
+            <h2>Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000</div>
+                        <h3>The Beginning</h3>
+                        <p>LifeCare Medical Center was founded as a small clinic with just 10 beds and a team of 5 dedicated healthcare professionals.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005</div>
+                        <h3>Expansion</h3>
+                        <p>Expanded to a 50-bed facility with the addition of specialized departments including Cardiology, Pediatrics, and Orthopedics.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3>Technological Advancement</h3>
+                        <p>Implemented electronic health records and acquired state-of-the-art diagnostic equipment to enhance patient care.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3>Research Center</h3>
+                        <p>Established a dedicated research center to advance medical knowledge and develop innovative treatment approaches.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Modern Expansion</h3>
+                        <p>Completed a major expansion to a 200-bed facility with specialized centers of excellence and cutting-edge technology.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Launched telemedicine services and a patient portal to enhance accessibility and convenience for our patients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h2>LifeCare by the Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="counter" data-target="200">0</span>+
+                    </div>
+                    <div class="stat-label">Hospital Beds</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="counter" data-target="150">0</span>+
+                    </div>
+                    <div class="stat-label">Specialized Doctors</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="counter" data-target="50000">0</span>+
+                    </div>
+                    <div class="stat-label">Patients Annually</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="counter" data-target="25">0</span>+
+                    </div>
+                    <div class="stat-label">Specialized Departments</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animated Counters
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            if (!counters.length) return;
+            
+            const animateCounter = (counter, target) => {
+                let count = 0;
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCount();
+            };
+            
+            const checkCounters = () => {
+                counters.forEach(counter => {
+                    const elementTop = counter.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible && !counter.classList.contains('counted')) {
+                        counter.classList.add('counted');
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        animateCounter(counter, target);
+                    }
+                });
+            };
+            
+            // Check on initial load
+            checkCounters();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkCounters);
+        }
+
+        // Timeline Animation
+        function initTimelineAnimation() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            if (!timelineItems.length) return;
+            
+            timelineItems.forEach(item => {
+                item.classList.add('visible');
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initCounters();
+            initTimelineAnimation();
+        });
+    </script>
+</body>
+</html>

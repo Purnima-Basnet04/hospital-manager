@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - LifeCare Medical Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/clean-dashboard.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-heartbeat"></i>
+        <span>LifeCare</span>
+      </a>
+      
+      <div class="header-actions">
+        <div class="notification-icon">
+          <i class="far fa-bell"></i>
+          <span class="notification-badge">5</span>
+        </div>
+        
+        <div class="user-menu">
+          <div class="user-avatar">
+            <span>AA</span>
+          </div>
+          <span class="user-name">Admin</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-menu">
+      <div class="menu-section">
+        <div class="menu-title">Main</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link active">
+              <i class="fas fa-home menu-icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-user-md menu-icon"></i>
+              <span>Doctors</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-user-injured menu-icon"></i>
+              <span>Patients</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-calendar-alt menu-icon"></i>
+              <span>Appointments</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="menu-section">
+        <div class="menu-title">Management</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-hospital menu-icon"></i>
+              <span>Departments</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-file-invoice-dollar menu-icon"></i>
+              <span>Billing</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-pills menu-icon"></i>
+              <span>Pharmacy</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-flask menu-icon"></i>
+              <span>Laboratory</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="menu-section">
+        <div class="menu-title">System</div>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-users menu-icon"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-cog menu-icon"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fas fa-sign-out-alt menu-icon"></i>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Welcome Section -->
+    <div class="doctor-welcome">
+      <h1 class="welcome-title">Admin Dashboard</h1>
+      <p class="welcome-subtitle">Hospital management system overview</p>
+    </div>
+    
+    <!-- Stats Row -->
+    <div class="admin-stats">
+      <div class="admin-stat-card primary">
+        <i class="fas fa-user-md stat-icon-bg"></i>
+        <h2 class="stat-number">24</h2>
+        <p class="stat-label">Total Doctors</p>
+      </div>
+      
+      <div class="admin-stat-card secondary">
+        <i class="fas fa-user-injured stat-icon-bg"></i>
+        <h2 class="stat-number">358</h2>
+        <p class="stat-label">Total Patients</p>
+      </div>
+      
+      <div class="admin-stat-card accent">
+        <i class="fas fa-calendar-check stat-icon-bg"></i>
+        <h2 class="stat-number">42</h2>
+        <p class="stat-label">Today's Appointments</p>
+      </div>
+      
+      <div class="admin-stat-card warning">
+        <i class="fas fa-dollar-sign stat-icon-bg"></i>
+        <h2 class="stat-number">$12,580</h2>
+        <p class="stat-label">Today's Revenue</p>
+      </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <h2 class="section-title">Quick Actions</h2>
+      
+      <div class="action-buttons">
+        <a href="#" class="action-button">
+          <i class="fas fa-user-plus action-icon"></i>
+          <span class="action-label">Add Doctor</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-user-plus action-icon"></i>
+          <span class="action-label">Add Patient</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-calendar-plus action-icon"></i>
+          <span class="action-label">Schedule Appointment</span>
+        </a>
+        
+        <a href="#" class="action-button">
+          <i class="fas fa-file-invoice action-icon"></i>
+          <span class="action-label">Generate Report</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Recent Appointments -->
+    <div class="data-table-container">
+      <div class="table-header">
+        <h2 class="section-title">Recent Appointments</h2>
+        <button class="btn btn-primary">
+          <i class="fas fa-plus"></i> Add New
+        </button>
+      </div>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date & Time</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Dr. Smith</td>
+            <td>Today, 09:00 AM</td>
+            <td>Cardiology</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Dr. Johnson</td>
+            <td>Today, 10:30 AM</td>
+            <td>Neurology</td>
+            <td><span class="status-badge active">Confirmed</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Robert Johnson</td>
+            <td>Dr. Williams</td>
+            <td>Today, 01:15 PM</td>
+            <td>Orthopedics</td>
+            <td><span class="status-badge active">Confirmed</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Mary Williams</td>
+            <td>Dr. Brown</td>
+            <td>Today, 03:00 PM</td>
+            <td>Pediatrics</td>
+            <td><span class="status-badge inactive">Cancelled</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>David Brown</td>
+            <td>Dr. Davis</td>
+            <td>Tomorrow, 11:00 AM</td>
+            <td>Dermatology</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="pagination">
+        <div class="pagination-info">
+          Showing 1 to 5 of 42 entries
+        </div>
+        <div class="pagination-controls">
+          <button class="page-btn"><i class="fas fa-angle-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <button class="page-btn"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Recent Doctors -->
+    <div class="data-table-container">
+      <div class="table-header">
+        <h2 class="section-title">Doctors List</h2>
+        <div class="patient-search" style="width: 300px; margin-bottom: 0;">
+          <input type="text" class="search-input" placeholder="Search doctors...">
+        </div>
+      </div>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Specialization</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dr. John Smith</td>
+            <td>Cardiology</td>
+            <td>Heart Surgeon</td>
+            <td>(555) 123-4567</td>
+            <td><span class="status-badge active">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Dr. Sarah Johnson</td>
+            <td>Neurology</td>
+            <td>Neurologist</td>
+            <td>(555) 234-5678</td>
+            <td><span class="status-badge active">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Dr. Michael Williams</td>
+            <td>Orthopedics</td>
+            <td>Orthopedic Surgeon</td>
+            <td>(555) 345-6789</td>
+            <td><span class="status-badge active">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Dr. Emily Brown</td>
+            <td>Pediatrics</td>
+            <td>Pediatrician</td>
+            <td>(555) 456-7890</td>
+            <td><span class="status-badge inactive">On Leave</span></td>
+            <td>
+              <div class="table-actions">
+                <button class="action-icon-btn view"><i class="fas fa-eye"></i></button>
+                <button class="action-icon-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-icon-btn delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="pagination">
+        <div class="pagination-info">
+          Showing 1 to 4 of 24 entries
+        </div>
+        <div class="pagination-controls">
+          <button class="page-btn"><i class="fas fa-angle-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <button class="page-btn"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Simple toggle for mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add mobile menu toggle functionality if needed
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

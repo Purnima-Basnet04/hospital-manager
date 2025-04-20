@@ -1,0 +1,230 @@
+/*
+ * LifeCare Medical Center - Register Page Styles
+ * This file contains styles specific to the registration page
+ */
+
+/* Import common styles */
+@import url('common.css');
+
+/* Register Page Specific Styles */
+.form-section {
+    background-color: var(--bg-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.form-section h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-dark);
+    text-align: center;
+    position: relative;
+}
+
+.form-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.register-form {
+    margin-top: var(--spacing-xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Full width form elements */
+.register-form .form-group:nth-child(7),  /* Address */
+.register-form .form-group:nth-child(15), /* Medical History */
+.register-form .form-group:nth-child(16), /* Allergies */
+.register-form .form-group:nth-child(17), /* Buttons */
+.register-form .form-group:nth-child(18)  /* Form links */ {
+    grid-column: span 2;
+}
+
+.register-form .form-group {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.register-form .form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: var(--font-size-sm);
+}
+
+.register-form .form-group input,
+.register-form .form-group select,
+.register-form .form-group textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+    transition: all 0.3s ease;
+    background-color: var(--bg-off-white);
+    color: var(--text-dark);
+}
+
+.register-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.register-form .form-group input:focus,
+.register-form .form-group select:focus,
+.register-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+    background-color: var(--bg-white);
+}
+
+.register-form .form-group input.invalid,
+.register-form .form-group select.invalid,
+.register-form .form-group textarea.invalid {
+    border-color: var(--warning-color);
+    background-color: rgba(234, 67, 53, 0.05);
+}
+
+.register-form .form-group .error-text {
+    color: var(--warning-color);
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+    display: block;
+}
+
+.register-form .form-group small {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    margin-top: var(--spacing-xs);
+}
+
+.register-form .form-group:nth-child(17) {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.register-form .form-group:nth-child(17) button {
+    flex: 1;
+    max-width: 200px;
+}
+
+.form-links {
+    margin-top: var(--spacing-md);
+    text-align: center;
+    font-size: var(--font-size-sm);
+}
+
+.error-message {
+    background-color: rgba(234, 67, 53, 0.1);
+    color: var(--warning-color);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--warning-color);
+    font-size: var(--font-size-sm);
+    grid-column: span 2;
+}
+
+/* Register page specific animations */
+.form-section {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 5px;
+    margin-top: 5px;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    background-color: var(--border-color);
+}
+
+.password-strength.weak {
+    background-color: var(--warning-color);
+    width: 30%;
+}
+
+.password-strength.medium {
+    background-color: var(--accent-color);
+    width: 60%;
+}
+
+.password-strength.strong {
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+/* Responsive styles specific to register page */
+@media (max-width: 768px) {
+    .register-form {
+        grid-template-columns: 1fr;
+    }
+
+    .register-form .form-group:nth-child(7),
+    .register-form .form-group:nth-child(15),
+    .register-form .form-group:nth-child(16),
+    .register-form .form-group:nth-child(17),
+    .register-form .form-group:nth-child(18) {
+        grid-column: span 1;
+    }
+
+    .form-section {
+        padding: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .register-form .form-group:nth-child(17) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .register-form .form-group:nth-child(17) button {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-sm);
+    }
+
+    .register-form .form-group input,
+    .register-form .form-group select,
+    .register-form .form-group textarea {
+        padding: var(--spacing-sm);
+    }
+}

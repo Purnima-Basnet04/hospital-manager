@@ -1,0 +1,236 @@
+/* 
+ * Admin Dashboard Styles - For use in both admin and doctor dashboards
+ * Provides consistent styling across different user roles
+ */
+
+/* ===== ADMIN STATS CARDS ===== */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.admin-stat-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.admin-stat-card.primary {
+  border-top: 4px solid var(--primary);
+}
+
+.admin-stat-card.secondary {
+  border-top: 4px solid var(--secondary);
+}
+
+.admin-stat-card.accent {
+  border-top: 4px solid var(--accent);
+}
+
+.admin-stat-card.warning {
+  border-top: 4px solid var(--warning);
+}
+
+.stat-icon-bg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 48px;
+  opacity: 0.1;
+  color: var(--text-dark);
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm) 0;
+  color: var(--text-dark);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+/* ===== DATA TABLES ===== */
+.data-table-container {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-color);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-lg);
+}
+
+.data-table th {
+  background-color: var(--light-gray);
+  padding: var(--space-md);
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-medium);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table td {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--primary-light);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: rgba(52, 168, 83, 0.15);
+  color: var(--secondary);
+}
+
+.status-badge.pending {
+  background-color: rgba(251, 188, 5, 0.15);
+  color: var(--accent);
+}
+
+.status-badge.cancelled {
+  background-color: rgba(234, 67, 53, 0.15);
+  color: var(--warning);
+}
+
+.table-actions {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.action-icon-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.action-icon-btn.view {
+  background-color: rgba(26, 115, 232, 0.1);
+  color: var(--primary);
+}
+
+.action-icon-btn.edit {
+  background-color: rgba(52, 168, 83, 0.1);
+  color: var(--secondary);
+}
+
+.action-icon-btn.delete {
+  background-color: rgba(234, 67, 53, 0.1);
+  color: var(--warning);
+}
+
+.action-icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pagination-info {
+  color: var(--text-medium);
+}
+
+.pagination-controls {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.page-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.page-btn.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.page-btn:hover:not(.active) {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+  
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}

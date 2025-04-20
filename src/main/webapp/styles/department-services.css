@@ -1,0 +1,523 @@
+/* 
+ * LifeCare Medical Center - Department Services Page Styles
+ * This file contains styles specific to the department services page
+ */
+
+/* Import common styles */
+@import url('common.css');
+
+/* Department Services Page Specific Styles */
+.departments-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--bg-white);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    text-align: center;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.departments-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    z-index: 1;
+}
+
+.departments-hero h2 {
+    color: var(--bg-white);
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.departments-hero p {
+    font-size: var(--font-size-lg);
+    margin-bottom: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 2;
+}
+
+/* Department Navigation */
+.department-nav {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-xl);
+    overflow: hidden;
+}
+
+.department-nav-list {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.department-nav-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.department-nav-item {
+    padding: var(--spacing-md);
+    white-space: nowrap;
+    color: var(--text-medium);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.department-nav-item:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-off-white);
+}
+
+.department-nav-item.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Department Section */
+.department-section {
+    margin-bottom: var(--spacing-2xl);
+    scroll-margin-top: 100px;
+}
+
+.department-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.department-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(26, 115, 232, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-2xl);
+    flex-shrink: 0;
+}
+
+.department-title h2 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.department-title p {
+    margin-bottom: 0;
+    color: var(--text-medium);
+}
+
+.department-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.department-description {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.department-description h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.department-description h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.department-description p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+.department-description ul {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+}
+
+.department-description ul li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-medium);
+}
+
+.department-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    height: 100%;
+}
+
+.department-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Department Services */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(26, 115, 232, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+.service-content h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.service-content p {
+    margin-bottom: 0;
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+}
+
+/* Department Doctors */
+.doctors-section h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.doctors-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.doctors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.doctor-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.doctor-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-info {
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.doctor-info h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.doctor-info p.specialty {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.doctor-info p.bio {
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.doctor-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+/* Department FAQ */
+.faq-section {
+    margin-top: var(--spacing-xl);
+}
+
+.faq-section h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.faq-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.faq-list {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--bg-off-white);
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: var(--text-medium);
+    margin-bottom: 0;
+}
+
+/* Department CTA */
+.department-cta {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    color: var(--bg-white);
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.department-cta h3 {
+    color: var(--bg-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.department-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.cta-buttons .btn {
+    min-width: 150px;
+}
+
+.cta-buttons .btn.primary {
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+}
+
+.cta-buttons .btn.primary:hover {
+    background-color: var(--bg-off-white);
+}
+
+.cta-buttons .btn.secondary {
+    background-color: transparent;
+    color: var(--bg-white);
+    border: 1px solid var(--bg-white);
+}
+
+.cta-buttons .btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .department-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .department-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .departments-hero h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .departments-hero p {
+        font-size: var(--font-size-md);
+    }
+    
+    .department-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .department-title {
+        text-align: center;
+    }
+    
+    .doctors-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .departments-hero {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .departments-hero h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .department-nav-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .service-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .doctors-list {
+        grid-template-columns: 1fr;
+    }
+}

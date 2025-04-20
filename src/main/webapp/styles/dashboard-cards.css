@@ -1,0 +1,352 @@
+/* 
+ * LifeCare Medical Center - Dashboard Cards CSS
+ * Focused styling for dashboard cards and quick actions
+ */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+}
+
+.card-title {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Quick Actions Section */
+.quick-actions {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.quick-actions-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.action-button:hover {
+  background-color: #1557b0;
+  transform: translateY(-2px);
+}
+
+.action-button.outline {
+  background-color: transparent;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+}
+
+.action-button.outline:hover {
+  background-color: rgba(26, 115, 232, 0.05);
+}
+
+/* Header Icons and Badges */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  color: #666;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e53935;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific Card Types */
+.card.appointments {
+  border-left: 4px solid #1a73e8;
+}
+
+.card.patients {
+  border-left: 4px solid #34a853;
+}
+
+.card.reports {
+  border-left: 4px solid #fbbc05;
+}
+
+.card.completed {
+  border-left: 4px solid #4285f4;
+}
+
+/* Layout for the specific dashboard shown in screenshot */
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions-title {
+    text-align: center;
+  }
+}
+
+/* Direct styling for the elements in the screenshot */
+.stat-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+}
+
+.stat-title {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+.quick-actions-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.quick-actions-panel .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.quick-actions-panel .action-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions-panel .action-item {
+  padding: 15px 20px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.quick-actions-panel .action-item:last-child {
+  border-bottom: none;
+}
+
+.quick-actions-panel .action-item:hover {
+  background-color: #f5f8ff;
+}
+
+.quick-actions-panel .action-item.primary {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.quick-actions-panel .action-item.primary:hover {
+  background-color: #1557b0;
+}
+
+.quick-actions-panel .action-item.outline {
+  background-color: transparent;
+  color: #1a73e8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Exact match for the screenshot layout */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 350px;
+  margin: 20px;
+}
+
+.stat-card-simple {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+}
+
+.stat-card-simple .stat-title {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-card-simple .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.action-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.action-panel .panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.action-panel .action-btn {
+  display: block;
+  padding: 12px 15px;
+  background-color: #1a73e8;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.action-panel .action-btn:hover {
+  background-color: #1557b0;
+}
+
+.action-panel .action-btn.outline {
+  background-color: transparent;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+}
+
+.action-panel .action-btn.outline:hover {
+  background-color: rgba(26, 115, 232, 0.05);
+}
